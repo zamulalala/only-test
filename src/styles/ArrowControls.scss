@@ -49,6 +49,11 @@
     @media(max-width: 40rem) { // 640px -> 40rem
       width: 1.5625rem; // 25px -> 1.5625rem
       height: 1.5625rem; // 25px -> 1.5625rem
-    } 
+    }
+    
+    svg {
+      width: 0.4375rem;
+      height: auto;
+    }
   }
 }
