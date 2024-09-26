@@ -1,0 +1,92 @@
+@import './_variables.scss';
+
+.category-slider-container {
+  margin: 3.5rem 0 0 0; // 56px -> 3.5rem
+  display: flex;
+  position: relative;
+  max-width: 100%;
+
+  @media (max-width: 40rem) { // 640px -> 40rem
+    margin: 1.25rem 0 0 0; // 20px -> 1.25rem
+  }
+
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper-wrapper {
+    width: 100%; 
+  }
+
+  .swiper-slide {
+    max-width: 100%;
+  }
+
+  .event-card {
+    background-color: $transparent;
+    text-align: start;
+    transition: box-shadow 0.3s, opacity 0.3s;
+    width: 100%; 
+    max-width: 100%; 
+    opacity: 1;
+
+    @media (max-width: 64rem) { // 1024px -> 64rem
+      &.swiper-slide-visible:not(.swiper-slide-active) {
+        opacity: 0.4; 
+      }
+    }
+  }
+
+  .event-year {
+    color: $secondary-color;
+    font-size: 1.5625rem; // 25px
+
+    @media (max-width: 40rem) { // 640px -> 40rem
+      font-size: 1rem; // 16px
+    }
+  }
+
+  .event-description {
+    color: $primary-color;
+    font-size: 1.25rem; // 20px
+    margin-top: 0.9375rem; // 15px -> 0.9375rem
+
+    @media (max-width: 40rem) { // 640px -> 40rem
+      font-size: 0.875rem; // 14px
+    }
+  }
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 4.0625rem; // 65px -> 4.0625rem
+  transform: translateY(-50%);
+  width: 2.5rem; // 40px -> 2.5rem
+  height: 2.5rem; // 40px -> 2.5rem
+  background-color: $white-color;
+  border-radius: 50%;
+  box-shadow: 0 0 0.9375rem $shadow-color; // 15px -> 0.9375rem
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  transition: box-shadow 0.3s;
+
+  &.left-arrow {
+    left: -3.75rem; // 60px -> 3.75rem
+  }
+
+  &.right-arrow {
+    right: -3.75rem; // 60px -> 3.75rem
+  }
+
+  &:hover {
+    box-shadow: 0 0 0.9375rem $shadow-color-hover; // 15px -> 0.9375rem
+  }
+
+  // Скрываем стрелки на мобильных устройствах до 640px
+  @media (max-width: 40rem) { // 640px -> 40rem
+    display: none;
+  }
+}

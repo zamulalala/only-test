@@ -1,0 +1,35 @@
+// Стили для блока годов
+
+@import './_variables.scss';
+
+.year-display {
+  display: flex;
+  justify-content: center;
+  color: $tertiary-color; 
+  font-size: 12.5rem; // 200px -> 12.5rem
+  line-height: 160%;
+  margin-top: 0.9375rem; // 15px -> 0.9375rem
+  gap: 5.625rem; // 90px -> 5.625rem
+  transform: translateX(-0.625rem); // 10px -> 0.625rem
+  
+  .end-year {
+    color: $accent-color; 
+  
+    @media (max-width: 63.125rem) { // 1010px -> 63.125rem
+      color: $accent-color-mobile;
+    }
+  }
+
+  @media (max-width: 63.125rem) { // 1010px -> 63.125rem
+    font-size: 6.5rem; // 104px -> 6.5rem
+    color: $secondary-color;
+    justify-content: space-between;
+    gap: 0;
+    transform: translateX(0);
+    margin-top: 3.5rem; // 56px -> 3.5rem
+  }
+
+  @media (max-width: 40rem) { // 640px -> 40rem
+    font-size: 3.5rem; // 56px -> 3.5rem
+  }
+}

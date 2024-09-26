@@ -1,0 +1,15 @@
+// Стили для счетчика категорий
+
+@import './_variables.scss';
+
+.category-counter {
+  text-align: start;
+  font-size: 0.875rem;
+  margin-top: 8.5625rem; // 137px
+  color: $primary-color;
+
+  @media (max-width: 40rem) { // 640px 
+    font-size: 0.875rem;
+    margin-top: 0;
+  }
+}
